@@ -40,12 +40,34 @@ class EquilateralTriangle {
     }
 }
 
-class IsoscelesTriangle extends EquilateralTriangle{
-  constructor(equalSide, base){
-    this.equalSide = equalSide;
-    this.base=base;
-  }
+class IsoscelesTriangle extends EquilateralTriangle {
+    constructor(equalSide, base) {
+        super(equalSide);
+        this.base = base;
+    }
+    static area(a, b) {
+        return b / 4 * Math.sqrt(4 * a * a - b * b);
+    }
 }
-  S=(b/4)*Math.sqrt(4*a**2-b**2)
-console.log(IsoscelesTriangle(4, 7))
 
+//4
+let triangle1 = new EquilateralTriangle(6);
+console.log(triangle1);
+console.log(triangle1.side);
+
+let triangle2 = new IsoscelesTriangle(5, 6);
+console.log(triangle2);
+console.log(IsoscelesTriangle.area(triangle2.equalSide, triangle2.base));
+
+//5
+function AddGenerator(number) {
+    return function(value) {
+        return number + value;
+    };
+}
+
+let add1 = AddGenerator(5);
+let add2 = AddGenerator(10);
+
+console.log(add1(3));
+console.log(add2(7));
