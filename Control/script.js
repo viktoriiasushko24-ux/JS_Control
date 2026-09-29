@@ -5,8 +5,8 @@ function TriangleArea(base = 5, height = 4) {
     return area;
 }
 
-TriangleArea(3, 6);
-TriangleArea();
+console.log(TriangleArea(3, 6));
+console.log(TriangleArea());
 
 //2
 function Jet(color, avgSpeed, maxAltitude, brand, pointOfDestination) {
